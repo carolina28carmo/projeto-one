@@ -24,7 +24,7 @@ Projeto front-end desenvolvido para uma ONG como atividade prática da disciplin
                 <p> 
                     Nossa ONG atua na promoção da solicariedade e no desenvolvimento de ações sociais, buscando transformar a realidade de pessoas em situação de vulnerabilidade.
                 </p>
-                <img src="img/ong.jpg" alt="Voluntários da ONG realizando uma ação social">
+                <img src="img:ong.jpg" alt="Voluntários da ONG realizando uma ação social">
         </section>
         <section> 
             <h2>Entre em contato</h2>
