@@ -1,0 +1,275 @@
+/* =========================
+   DESIGN SYSTEM
+   ONG ESPERANÇA
+   ========================= */
+
+:root {
+    --verde-principal: #4A9B5F;
+    --verde-escuro: #2F6B3F;
+    --azul-claro: #A7DFF2;
+    --creme: #FFF7D6;
+    --branco: #FFFFFF;
+    --cinza-texto: #333333;
+    --cinza-claro: #D9E0D9;
+
+    --espaco-1: 8px;
+    --espaco-2: 16px;
+    --espaco-3: 24px;
+    --espaco-4: 32px;
+    --espaco-5: 40px;
+    --espaco-6: 48px;
+
+    --raio: 8px;
+}
+
+/* =========================
+   RESET BÁSICO
+   ========================= */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: var(--cinza-texto);
+    background-color: var(--branco);
+    line-height: 1.6;
+}
+
+/* =========================
+   CONTAINER
+   ========================= */
+
+main,
+header,
+footer {
+    width: min(calc(100% - 32px), 1200px);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* =========================
+   CABEÇALHO
+   ========================= */
+
+header {
+    background-color: var(--verde-principal);
+    color: var(--branco);
+    padding: var(--espaco-3);
+    margin-top: var(--espaco-2);
+    border-radius: var(--raio);
+}
+
+header h1 {
+    font-size: 2rem;
+    margin-bottom: var(--espaco-2);
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--espaco-2);
+}
+
+nav a {
+    color: var(--branco);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* =========================
+   CONTEÚDO
+   ========================= */
+
+main {
+    padding: var(--espaco-5) 0;
+}
+
+section {
+    margin-bottom: var(--espaco-5);
+}
+
+h2 {
+    font-size: 2rem;
+    color: var(--verde-escuro);
+    margin-bottom: var(--espaco-2);
+}
+
+h3 {
+    font-size: 1.5rem;
+    color: var(--verde-escuro);
+    margin-bottom: var(--espaco-2);
+}
+
+p {
+    margin-bottom: var(--espaco-2);
+}
+
+/* =========================
+   IMAGENS
+   ========================= */
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border-radius: var(--raio);
+}
+
+/* =========================
+   FORMULÁRIOS
+   ========================= */
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--espaco-3);
+}
+
+fieldset {
+    border: 2px solid var(--cinza-claro);
+    border-radius: var(--raio);
+    padding: var(--espaco-3);
+}
+
+legend {
+    color: var(--verde-escuro);
+    font-weight: bold;
+    padding: 0 var(--espaco-1);
+}
+
+label {
+    display: block;
+    margin-bottom: var(--espaco-1);
+    font-weight: bold;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid var(--cinza-claro);
+    border-radius: 6px;
+    font: inherit;
+    margin-bottom: var(--espaco-2);
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: var(--verde-principal);
+    box-shadow: 0 0 0 3px rgba(74, 155, 95, 0.2);
+}
+
+textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+/* =========================
+   BOTÕES
+   ========================= */
+
+button {
+    background-color: var(--verde-principal);
+    color: var(--branco);
+    border: 2px solid var(--verde-principal);
+    padding: 12px 24px;
+    border-radius: var(--raio);
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+button:hover {
+    background-color: var(--verde-escuro);
+    border-color: var(--verde-escuro);
+}
+
+button:focus {
+    outline: 3px solid var(--azul-claro);
+    outline-offset: 2px;
+}
+
+button:active {
+    transform: translateY(1px);
+}
+
+/* =========================
+   PROJETOS
+   ========================= */
+
+article {
+    border: 1px solid var(--cinza-claro);
+    border-radius: var(--raio);
+    padding: var(--espaco-3);
+    margin-bottom: var(--espaco-3);
+    background-color: var(--branco);
+}
+
+article:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+/* =========================
+   RODAPÉ
+   ========================= */
+
+footer {
+    background-color: var(--verde-escuro);
+    color: var(--branco);
+    padding: var(--espaco-3);
+    margin-bottom: var(--espaco-3);
+    border-radius: var(--raio);
+}
+
+footer p {
+    margin-bottom: 0;
+}
+
+/* =========================
+   RESPONSIVIDADE
+   ========================= */
+
+@media (min-width: 576px) {
+    main {
+        width: min(calc(100% - 48px), 1200px);
+    }
+}
+
+@media (min-width: 768px) {
+    nav {
+        gap: var(--espaco-3);
+    }
+
+    article {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+}
+
+@media (min-width: 992px) {
+    header h1 {
+        font-size: 2.5rem;
+    }
+}
+
+@media (min-width: 1200px) {
+    main {
+        padding-top: var(--espaco-6);
+    }
+}
